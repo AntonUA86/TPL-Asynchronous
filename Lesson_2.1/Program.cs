@@ -12,7 +12,7 @@ namespace Lesson_2._1
         {
             int[] array = new int[] { 2, 1, 3, 55, 12, 4 };
     
-            Task<int[]> task = Task<int[]>.Run(() => SortArray(true, array));
+            Task<int[]> task = Task.Run(() => SortArray(true, array).ToArray());
             task.ContinueWith(GetResult);
 
 
@@ -20,7 +20,7 @@ namespace Lesson_2._1
 
             Console.ReadLine();
         }
-        private static int[] SortArray(bool isAscending, params int[] array)
+        private static IEnumerable<int> SortArray(bool isAscending, params int[] array)
         {
             int[] result = new int[array.Length];
             if(isAscending == true)

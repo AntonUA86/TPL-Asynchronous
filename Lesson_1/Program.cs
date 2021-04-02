@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Lesson_1
+namespace Lesson_1._1
 {
 
     class Program
